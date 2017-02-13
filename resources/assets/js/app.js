@@ -14,6 +14,7 @@ require('./bootstrap');
  */
 
 Vue.component('example', require('./components/Example.vue'));
+Vue.component('my-vuetable', require('./components/MyVuetable.vue'));
 
 const app = new Vue({
     el: '#app'

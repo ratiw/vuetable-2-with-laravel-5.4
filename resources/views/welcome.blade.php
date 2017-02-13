@@ -5,5 +5,7 @@
 
     <example></example>
 
+    <my-vuetable></my-vuetable>
+
 </div>
 @endsection
