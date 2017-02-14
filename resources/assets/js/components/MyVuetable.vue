@@ -11,7 +11,7 @@
       :append-params="moreParams"
       @vuetable:cell-clicked="onCellClicked"
       @vuetable:pagination-data="onPaginationData"
-    ></vuetable>
+    ></vuetable> 
     <div class="vuetable-pagination">
       <vuetable-pagination-info ref="paginationInfo"
         info-class="pagination-info"
@@ -57,7 +57,9 @@ export default {
           titleClass: 'text-right',
           dataClass: 'text-right'
         },
-        '__checkbox',
+        {
+          name: '__checkbox',
+        },
         {
           name: 'name',
           sortField: 'name',
