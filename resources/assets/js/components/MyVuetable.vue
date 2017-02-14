@@ -1,11 +1,15 @@
 <template>
   <div>
+    <filter-bar></filter-bar>
     <vuetable ref="vuetable"
       api-url="http://vuetable.ratiw.net/api/users"
       :fields="fields"
       pagination-path=""
       :css="css.table"
       :sort-order="sortOrder"
+      detail-row-component="my-detail-row"
+      :append-params="moreParams"
+      @vuetable:cell-clicked="onCellClicked"
       @vuetable:pagination-data="onPaginationData"
     ></vuetable>
     <div class="vuetable-pagination">
@@ -28,9 +32,15 @@ import Vuetable from 'vuetable-2/src/components/Vuetable'
 import VuetablePagination from 'vuetable-2/src/components/VuetablePagination'
 import VuetablePaginationInfo from 'vuetable-2/src/components/VuetablePaginationInfo'
 import Vue from 'vue'
+import VueEvents from 'vue-events'
 import CustomActions from './CustomActions'
+import DetailRow from './DetailRow'
+import FilterBar from './FilterBar'
 
+Vue.use(VueEvents)
 Vue.component('custom-actions', CustomActions)
+Vue.component('my-detail-row', DetailRow)
+Vue.component('filter-bar', FilterBar)
 
 export default {
   components: {
@@ -111,7 +121,8 @@ export default {
       },
       sortOrder: [
         { field: 'email', sortField: 'email', direction: 'asc'}
-      ]
+      ],
+      moreParams: {}
     }
   },
   methods: {
@@ -137,6 +148,22 @@ export default {
     },
     onChangePage (page) {
       this.$refs.vuetable.changePage(page)
+    },
+    onCellClicked (data, field, event) {
+      console.log('cellClicked: ', field.name)
+      this.$refs.vuetable.toggleDetailRow(data.id)
+    },
+  },
+  events: {
+    'filter-set' (filterText) {
+      this.moreParams = {
+        filter: filterText
+      }
+      Vue.nextTick( () => this.$refs.vuetable.refresh() )
+    },
+    'filter-reset' () {
+      this.moreParams = {}
+      Vue.nextTick( () => this.$refs.vuetable.refresh() )
     }
   }
 }
