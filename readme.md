@@ -1,7 +1,7 @@
 Sample project using Vuetable-2 with Laravel 5.4 and Laravel Mix 
 ----
 
-Setting up
+## Setting up
 - create laravel 5.4 project
 ```
   laravel new vuetable-l54
