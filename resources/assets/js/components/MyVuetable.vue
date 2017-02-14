@@ -7,6 +7,7 @@
       pagination-path=""
       :css="css.table"
       :sort-order="sortOrder"
+      :multi-sort="true"
       detail-row-component="my-detail-row"
       :append-params="moreParams"
       @vuetable:cell-clicked="onCellClicked"
@@ -59,6 +60,8 @@ export default {
         },
         {
           name: '__checkbox',
+          titleClass: 'text-center',
+          dataClass: 'text-center',
         },
         {
           name: 'name',
@@ -133,8 +136,8 @@ export default {
     },
     genderLabel (value) {
       return value === 'M'
-        ? '<span class="label label-warning"><i class="glyphicon glyphicon-star"></i> Male</span>'
-        : '<span class="label label-success"><i class="glyphicon glyphicon-heart"></i> Female</span>'
+        ? '<span class="label label-success"><i class="glyphicon glyphicon-star"></i> Male</span>'
+        : '<span class="label label-danger"><i class="glyphicon glyphicon-heart"></i> Female</span>'
     },
     formatNumber (value) {
       return accounting.formatNumber(value, 2)

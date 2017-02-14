@@ -37047,6 +37047,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -37078,7 +37079,9 @@ __WEBPACK_IMPORTED_MODULE_5_vue___default.a.component('filter-bar', __WEBPACK_IM
         titleClass: 'text-right',
         dataClass: 'text-right'
       }, {
-        name: '__checkbox'
+        name: '__checkbox',
+        titleClass: 'text-center',
+        dataClass: 'text-center'
       }, {
         name: 'name',
         sortField: 'name'
@@ -37143,7 +37146,7 @@ __WEBPACK_IMPORTED_MODULE_5_vue___default.a.component('filter-bar', __WEBPACK_IM
       return value.toUpperCase();
     },
     genderLabel: function genderLabel(value) {
-      return value === 'M' ? '<span class="label label-warning"><i class="glyphicon glyphicon-star"></i> Male</span>' : '<span class="label label-success"><i class="glyphicon glyphicon-heart"></i> Female</span>';
+      return value === 'M' ? '<span class="label label-success"><i class="glyphicon glyphicon-star"></i> Male</span>' : '<span class="label label-danger"><i class="glyphicon glyphicon-heart"></i> Female</span>';
     },
     formatNumber: function formatNumber(value) {
       return __WEBPACK_IMPORTED_MODULE_0_accounting___default.a.formatNumber(value, 2);
@@ -57811,6 +57814,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "pagination-path": "",
       "css": _vm.css.table,
       "sort-order": _vm.sortOrder,
+      "multi-sort": true,
       "detail-row-component": "my-detail-row",
       "append-params": _vm.moreParams
     },
