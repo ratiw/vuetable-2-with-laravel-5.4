@@ -1,7 +1,18 @@
 Sample project using Vuetable-2 with Laravel 5.4 and Laravel Mix 
 ----
 
-## Setting up
+## Trying this sample project
+- clone the repo to your local machine
+- `cd` into the directory
+- install laravel dependency packages using `composer install`
+- install client-side javascript packages dependency by `npm install`
+- run the project using `php artisan serve` or whatever appropriate in your machine setup.
+
+You should see something like this.
+
+![image](https://raw.githubusercontent.com/ratiw/images/master/vuetable-2/vuetable-2-laravel-5.4-mix.png)
+
+## Steps to use Vuetable-2 in your Laravel 5.4 project
 - create laravel 5.4 project
     ```
       laravel new vuetable-l54
