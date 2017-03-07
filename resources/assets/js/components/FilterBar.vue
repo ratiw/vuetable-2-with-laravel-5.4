@@ -7,11 +7,11 @@
           <button class="btn btn-primary" @click.prevent="doFilter">Go</button>
           <button class="btn" @click.prevent="resetFilter">Reset</button>
         </div>
-      </div>
+      </form>
     </div>
-  </template>
+</template>
 
-  <script>
+<script>
   export default {
     data () {
       return {
