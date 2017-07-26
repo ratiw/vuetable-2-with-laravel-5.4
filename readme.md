@@ -5,6 +5,7 @@ Sample project using Vuetable-2 with Laravel 5.4 and Laravel Mix
 - clone the repo to your local machine
 - `cd` into the directory
 - install laravel dependency packages using `composer install`
+- create `.env` file and generate APP_KEY using `cp .env.example .env && php artisan key:generate`
 - install client-side javascript packages dependency by `npm install`
 - run the project using `php artisan serve` or whatever appropriate in your machine setup.
 
@@ -21,6 +22,16 @@ You should see something like this.
 - go into the project directory and install node packages
     ```
       npm install
+    ```
+
+- create `.env` file by copying from `.env.example`
+    ```
+      cp .env.example .env
+    ```
+
+- generate APP_KEY
+    ```
+      php artisan key:generate
     ```
 
 - generate authentication files
