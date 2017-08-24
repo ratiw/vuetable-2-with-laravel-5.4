@@ -12,14 +12,13 @@
       :append-params="moreParams"
       @vuetable:cell-clicked="onCellClicked"
       @vuetable:pagination-data="onPaginationData"
-    ></vuetable> 
+    ></vuetable>
     <div class="vuetable-pagination">
       <vuetable-pagination-info ref="paginationInfo"
         info-class="pagination-info"
       ></vuetable-pagination-info>
       <vuetable-pagination ref="pagination"
         :css="css.pagination"
-        :icons="css.icons"
         @vuetable-pagination:change-page="onChangePage"
       ></vuetable-pagination>
     </div>
@@ -116,6 +115,12 @@ export default {
           disabledClass: 'disabled',
           pageClass: 'page',
           linkClass: 'link',
+          icons: {
+            first: '',
+            prev: '',
+            next: '',
+            last: '',
+          },
         },
         icons: {
           first: 'glyphicon glyphicon-step-backward',
