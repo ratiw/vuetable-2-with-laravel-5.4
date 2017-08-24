@@ -58574,7 +58574,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
 
@@ -58654,7 +58653,13 @@ __WEBPACK_IMPORTED_MODULE_5_vue___default.a.component('filter-bar', __WEBPACK_IM
           activeClass: 'active',
           disabledClass: 'disabled',
           pageClass: 'page',
-          linkClass: 'link'
+          linkClass: 'link',
+          icons: {
+            first: '',
+            prev: '',
+            next: '',
+            last: ''
+          }
         },
         icons: {
           first: 'glyphicon glyphicon-step-backward',
@@ -62405,8 +62410,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }), _vm._v(" "), _c('vuetable-pagination', {
     ref: "pagination",
     attrs: {
-      "css": _vm.css.pagination,
-      "icons": _vm.css.icons
+      "css": _vm.css.pagination
     },
     on: {
       "vuetable-pagination:change-page": _vm.onChangePage
