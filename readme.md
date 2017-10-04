@@ -34,15 +34,10 @@ You should see something like this.
       php artisan key:generate
     ```
 
-- generate authentication files
-    ```
-      php artisan make:auth
-    ```
-
 - replace `welcome.blade.php` with the version in the repo or just add component
 - install additional babel plugins
     ```
-      npm install babel-plugin-transform-runtime babel-preset-stage-2 bable-preset-es2015 --save-dev
+      npm install babel-plugin-transform-runtime babel-preset-stage-2 babel-preset-es2015 --save-dev
     ```
 
 - install vuetable-2
