@@ -51,7 +51,9 @@ You should see something like this.
     ```
 
 - install vuetable-2 dependencies
-    ``` npm install accounting lodash moment vue-events --save-dev
+    ```
+      npm install accounting lodash moment vue-events --save-dev
+    ```
 
 - create your Vue component in `resources\assets\js\components`
 - register the component in `resources\assets\js\app.js`
