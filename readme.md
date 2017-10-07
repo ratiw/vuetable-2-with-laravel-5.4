@@ -34,30 +34,20 @@ You should see something like this.
       php artisan key:generate
     ```
 
-- generate authentication files
-    ```
-      php artisan make:auth
-    ```
-
-- replace `welcome.blade.php` to extend from `layouts.app`
-    ```php
-      @extends('layouts.app')
-
-      @section('content')
-        <div class="container">
-            <my-vuetable></my-vuetable>
-        </div>
-      @endsection
-    ```
-
+- replace `welcome.blade.php` with the version in the repo or just add component
 - install additional babel plugins
     ```
-      npm install babel-plugin-transform-runtime babel-preset-stage-2 --save-dev
+      npm install babel-plugin-transform-runtime babel-preset-stage-2 babel-preset-es2015 --save-dev
     ```
 
 - install vuetable-2
     ```
       npm install vuetable-2 --save-dev
+    ```
+
+- install vuetable-2 dependencies
+    ```
+      npm install accounting lodash moment vue-events --save-dev
     ```
 
 - create your Vue component in `resources\assets\js\components`
@@ -68,5 +58,5 @@ You should see something like this.
 
 - compile using Laravel-Mix by running
     ```
-      npm run watch
+      npm run dev
     ```
